@@ -1,0 +1,29 @@
+# 템플릿 동기화 규칙 — tools/template-sync.py 가 읽는다.
+#
+#   keep <패턴>   내 것. 템플릿이 절대 건드리지 않는다.
+#   sync <패턴>   템플릿이 관리한다. 내가 안 고쳤으면 새 판으로 바꾸고, 고쳤으면 3방향으로 합친다.
+#
+# 위에서부터 **처음 맞는 줄**을 따른다. 아무 줄에도 안 맞으면 keep(안전한 쪽)이다.
+# `*` 는 폴더 하나 안에서, `**` 는 하위 폴더까지 맞춘다.
+#
+# 내가 이 파일을 고치면 그 판이 다음 동기화부터 적용된다(이 파일도 sync 대상이다).
+# 예: 내가 크게 고친 커맨드 하나를 템플릿 갱신에서 빼고 싶으면 그 줄을 keep 으로 올린다.
+#     keep .claude/commands/eod.md
+
+keep me.md
+keep index.md
+keep log.md
+keep .env
+keep .template-version
+keep tools/slack-ingest/channels.json
+
+# brain 은 내 생각이지만, 레이어 설명과 템플릿 서식은 템플릿이 관리한다
+sync brain/README.md
+sync brain/TEMPLATE.md
+keep brain/**
+
+keep raw/**
+keep wiki/**
+
+# 나머지(커맨드·도구·안내 문서·CLAUDE.md·.gitignore)는 템플릿이 관리한다
+sync **

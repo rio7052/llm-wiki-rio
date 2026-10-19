@@ -1,0 +1,56 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Obsidian per-vault state (컴퓨터마다 다름)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/graph.json
+*.canvas
+
+# Temp
+*.tmp
+*.log
+~$*
+
+# Python (위키 옆 스크립트)
+__pycache__/
+*.pyc
+.venv/
+
+# ── raw/ 는 git 추적한다. 단 **md 만** (CLAUDE.md §4.3)
+# 원본 PDF·이미지·jsonl 등 바이너리/대용량은 로컬에만 두고, 변환한 .md 만 커밋된다.
+# 개인 private repo 전제 — 그래도 마스킹 규칙(§9)은 raw 에도 적용한다.
+raw/**
+!raw/**/
+!raw/**/*.md
+!raw/**/.gitkeep
+
+# 시크릿 .env — 위키 루트(공용) + 도구 로컬(override) 모두 제외
+/.env
+tools/slack-ingest/.env
+
+# slack-ingest 로컬 상태 (커서·캐시·본인 채널 목록)
+tools/slack-ingest/.cursor.json
+tools/slack-ingest/.nas-cursor.json
+tools/slack-ingest/.users_cache.json
+tools/slack-ingest/channels.json
+
+# /log 세션 캡처 로컬 상태 (§7.11)
+.log-cursor
+.log-runs.log
+
+# 전사 위키 도구 캐시 (내 이름·파트 — tools/company-wiki.py)
+.company-wiki.json
+
+# 템플릿 동기화 작업 폴더 (tools/template-sync.py)
+.template-sync/
