@@ -2,7 +2,7 @@
 type: task-board
 tags: [tasks]
 status: active
-last_updated: YYYY-MM-DD
+last_updated: 2026-10-20
 ---
 
 # 태스크 보드
@@ -16,6 +16,7 @@ last_updated: YYYY-MM-DD
 
 ## 📥 Inbox
 <!-- 분류 전 -->
+- [ ] 김천 3농가 설치 의사 전화 · src:/morning 2026-10-20 · @rio · due:2026-10-23 · note:금요일 또는 다음주 월요일(10-26). 설치는 다다음주 예정. 연락처는 원 메모에만
 
 ## 👀 확인 필요
 <!-- 내가 직접 봐야 할 것 -->
