@@ -13,6 +13,11 @@
 - 신규: [[entities/...]]
 -->
 
+## [2026-10-25] daily | 2026-10-25
+- raw: raw/reports/daily/2026-10-25.md (10-21·10-22 리포트도 이번에 함께 커밋)
+- 전사 공유본 업로드: bodit-inc/bodit-llm-wiki raw/reports/daily/rio/2026-10-25.md (금액·번호·개인명·배운점 제외)
+- 규칙 변경: `/morning` 미완료 할 일 자동 이월 (별도 커밋 abe7de8)
+
 ## [2026-10-20] daily | 2026-10-20
 - raw: raw/reports/daily/2026-10-20.md
 - 전사 공유본 업로드: bodit-inc/bodit-llm-wiki raw/reports/daily/rio/2026-10-20.md (회고 생략)
